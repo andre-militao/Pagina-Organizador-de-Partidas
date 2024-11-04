@@ -1,0 +1,86 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* Aplicando o gradiente no fundo */
+  background: linear-gradient(135deg, #2B0E44, #000);
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  background-color: #1a1a2e;
+}
+
+h1 {
+  color: #793AAF; /* Novo tom de roxo para título */
+}
+
+#loginButton {
+  background-color: #793AAF; /* Novo tom de roxo para o botão */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#loginButton:hover {
+  background-color: #56297d; /* Tom mais escuro no hover */
+}
+
+/* Seções */
+section {
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px 0;
+  background-color: #22234d;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #a29bfe;
+}
+
+button, select, input {
+  font-size: 1em;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: #793AAF; /* Cor de fundo dos botões */
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, select:hover, input:hover {
+  background-color: #56297d; /* Cor de hover */
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  body {
+    padding: 40px;
+  }
+
+  #gamesList, #scheduleGame {
+    width: 45%;
+  }
+}

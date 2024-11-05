@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Cabeçalho de Navegação -->
+
   <header>
     <h1>GamerTogether</h1>
     <nav>
@@ -23,24 +23,26 @@
     <button id="loginButton"><i class="fab fa-discord"></i> Entrar com Discord</button>
   </header>
 
-  <!-- Tela de Boas-Vindas -->
+
   <section id="welcome" class="welcome-screen">
+    <h1 class="neon-title">GamerTogether</h1>
     <h2>Conecte-se e organize suas jogatinas</h2>
     <p>Crie grupos para jogar e se divertir com seus amigos.</p>
     <button class="discord-login-btn">
       <i class="fab fa-discord"></i> Entrar com Discord
     </button>
   </section>
+  
 
-  <!-- Tela de Listagem de Partidas -->
+
   <section id="match-list" class="match-list">
     <h2>Partidas Agendadas</h2>
     <div id="matchesContainer">
-      <!-- Partidas serão adicionadas dinamicamente aqui -->
+      
     </div>
   </section>
 
-  <!-- Tela de Agendar Partida -->
+
   <section id="schedule-match" class="schedule-match">
     <h2>Agendar Partida</h2>
     <form id="scheduleForm">
@@ -51,7 +53,7 @@
         <option value="Valorant">Valorant</option>
         <option value="CS:GO">Counter-Strike: Global Offensive</option>
         <option value="Fortnite">Fortnite</option>
-        <!-- Adicione mais opções conforme necessário -->
+        
       </select>
 
       <label for="date"><i class="fas fa-calendar-alt"></i> Data:</label>
@@ -64,7 +66,7 @@
     </form>
   </section>
 
-  <!-- Modal de Detalhes do Jogo -->
+  
   <div id="gameModal" class="modal">
     <div class="modal-content">
       <span id="closeModal" class="close">&times;</span>

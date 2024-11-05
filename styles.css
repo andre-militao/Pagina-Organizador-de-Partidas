@@ -1,3 +1,137 @@
+/* Estilo de Fundo Degradê para o Corpo */
+body {
+  background: linear-gradient(to bottom, #2B0E44, #000000);
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Estilo para a Tela de Boas-Vindas */
+.welcome-screen {
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.welcome-message {
+  font-size: 1.2em;
+  color: #bbbbbb;
+  margin-bottom: 20px;
+}
+
+.discord-login-btn {
+  background-color: #793AAF;
+  color: #ffffff;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.discord-login-btn:hover {
+  background-color: #5a2e7a;
+}
+
+.discord-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+/* Estilo para a Tela de Listagem de Partidas */
+.match-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.match-card {
+  background-color: #2B0E44;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  transition: transform 0.2s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-4px);
+}
+
+.match-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.match-time {
+  color: #bbbbbb;
+}
+
+.players {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Estilo para a Tela de Agendar Partida */
+.schedule-match {
+  background-color: #2B0E44;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto;
+  color: #ffffff;
+}
+
+.schedule-title {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+select, input[type="date"], input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.schedule-btn {
+  background-color: #793AAF;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-btn:hover {
+  background-color: #5a2e7a;
+}
 /* Reset básico */
 * {
   margin: 0;
@@ -6,158 +140,221 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  /* Aplicando o gradiente no fundo */
-  background: linear-gradient(135deg, #2B0E44, #000);
+  background: linear-gradient(135deg, #2B0E44, #000000);
   color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-height: 100vh;
 }
 
-/* Header */
+/* Cabeçalho */
 header {
+  width: 100%;
+  background-color: #1a1a2e;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  width: 100%;
-  background-color: #1a1a2e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-h1 {
-  color: #793AAF; /* Novo tom de roxo para título */
+header h1 {
+  color: #793AAF;
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #793AAF;
 }
 
 #loginButton {
-  background-color: #793AAF; /* Novo tom de roxo para o botão */
+  background-color: #793AAF;
   color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 16px;
+  border-radius: 5px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   transition: background-color 0.3s ease;
 }
 
 #loginButton:hover {
-  background-color: #56297d; /* Tom mais escuro no hover */
+  background-color: #56297d;
 }
 
-/* Seções */
-section {
-  padding: 20px;
-  width: 90%;
-  max-width: 600px;
-  margin: 20px 0;
-  background-color: #22234d;
-  border-radius: 8px;
+/* Tela de Boas-Vindas */
+.welcome-screen {
+  text-align: center;
+  padding: 40px 20px;
 }
 
-h2 {
-  color: #a29bfe;
+.welcome-screen h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-button, select, input {
-  font-size: 1em;
-  padding: 10px;
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 5px;
-  border: none;
-  background-color: #793AAF; /* Cor de fundo dos botões */
-  color: #fff;
-  transition: background-color 0.3s ease;
+.welcome-screen p {
+  font-size: 1.2em;
+  color: #bbbbbb;
+  margin-bottom: 20px;
 }
 
-button:hover, select:hover, input:hover {
-  background-color: #56297d; /* Cor de hover */
-}
-
-/* Responsividade */
-@media (min-width: 768px) {
-  body {
-    padding: 40px;
-  }
-
-  #gamesList, #scheduleGame {
-    width: 45%;
-  }
-}
-/* Animação de entrada suave */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Aplicando a animação nas seções */
-section {
-  padding: 20px;
-  width: 90%;
-  max-width: 600px;
-  margin: 20px 0;
-  background-color: #22234d;
-  border-radius: 8px;
-  animation: fadeIn 0.6s ease-out;
-}
-
-/* Botões com transição de cor */
-button, select, input {
-  font-size: 1em;
-  padding: 10px;
-  margin-top: 10px;
-  width: 100%;
-  border-radius: 5px;
-  border: none;
+.discord-login-btn {
   background-color: #793AAF;
-  color: #fff;
+  color: #ffffff;
+  font-size: 1.1em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-button:hover, select:hover, input:hover {
+.discord-login-btn:hover {
   background-color: #56297d;
   transform: translateY(-2px);
 }
-/* Ajustes para dispositivos mobile */
-@media (max-width: 480px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
 
-  section {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  h1 {
-    font-size: 1.8em;
-  }
-
-  button {
-    font-size: 0.9em;
-    padding: 8px 16px;
-  }
+.discord-login-btn.clicked {
+  transform: scale(0.95);
 }
 
-/* Ajustes para tablets e desktops */
-@media (min-width: 768px) {
-  body {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  section {
-    width: 40%;
-    max-width: 600px;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
+/* Tela de Listagem de Partidas */
+.match-list {
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: rgba(34, 35, 77, 0.9);
+  border-radius: 8px;
+  margin: 20px 0;
 }
-/* Estilo do Modal */
+
+.match-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #a29bfe;
+}
+
+#matchesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.match-card {
+  background-color: #2B0E44;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.match-card:hover {
+  transform: translateY(-4px);
+  background-color: #3a0f55;
+}
+
+.match-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.match-time {
+  color: #bbbbbb;
+  margin: 5px 0;
+}
+
+.players {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.players span {
+  background-color: #44436a;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Tela de Agendar Partida */
+.schedule-match {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(34, 35, 77, 0.9);
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.schedule-match h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #a29bfe;
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-size: 1em;
+}
+
+form select, form input[type="date"], form input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 1em;
+}
+
+.schedule-btn {
+  background-color: #793AAF;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.schedule-btn:hover {
+  background-color: #56297d;
+  transform: translateY(-2px);
+}
+
+/* Modal de Detalhes do Jogo */
 .modal {
   display: none; /* Oculto por padrão */
   position: fixed;
@@ -168,6 +365,7 @@ button:hover, select:hover, input:hover {
   background-color: rgba(0, 0, 0, 0.8);
   align-items: center;
   justify-content: center;
+  z-index: 1001;
 }
 
 .modal-content {
@@ -177,16 +375,58 @@ button:hover, select:hover, input:hover {
   width: 80%;
   max-width: 500px;
   text-align: center;
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
 }
 
 .close {
-  color: #fff;
-  float: right;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #ffffff;
   font-size: 24px;
   cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .close:hover {
   color: #793AAF;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .match-list, .schedule-match {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-screen h2 {
+    font-size: 1.5em;
+  }
+
+  .welcome-screen p {
+    font-size: 1em;
+  }
+
+  .discord-login-btn, .schedule-btn {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}

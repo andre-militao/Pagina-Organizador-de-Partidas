@@ -1,46 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GamerTogether</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Font Awesome para ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <button id="loginButton"><i class="fas fa-gamepad"></i> Entrar com Discord</button>
-
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Cabeçalho de Navegação -->
   <header>
     <h1>GamerTogether</h1>
-    <button id="loginButton">Entrar com Discord</button>
+    <nav>
+      <ul>
+        <li><a href="#welcome">Início</a></li>
+        <li><a href="#match-list">Partidas</a></li>
+        <li><a href="#schedule-match">Agendar</a></li>
+      </ul>
+    </nav>
+    <button id="loginButton"><i class="fab fa-discord"></i> Entrar com Discord</button>
   </header>
 
-  <!-- Main Section -->
-  <main>
-    <!-- Página inicial com introdução -->
-    <section id="intro">
-      <h2>Conecte-se e organize suas jogatinas</h2>
-      <p>Organize suas jogatinas e reúna seus amigos em uma plataforma prática!</p>
-    </section>
+  <!-- Tela de Boas-Vindas -->
+  <section id="welcome" class="welcome-screen">
+    <h2>Conecte-se e organize suas jogatinas</h2>
+    <p>Crie grupos para jogar e se divertir com seus amigos.</p>
+    <button class="discord-login-btn">
+      <i class="fab fa-discord"></i> Entrar com Discord
+    </button>
+  </section>
 
-    <!-- Lista de Partidas Agendadas -->
-    <section id="gamesList">
-      <h2>Partidas Agendadas</h2>
-      <ul>
-        <!-- Lista dinâmica de partidas -->
-        <li>Exemplo de Partida</li>
-      </ul>
-    </section>
+  <!-- Tela de Listagem de Partidas -->
+  <section id="match-list" class="match-list">
+    <h2>Partidas Agendadas</h2>
+    <div id="matchesContainer">
+      <!-- Partidas serão adicionadas dinamicamente aqui -->
+    </div>
+  </section>
 
-    <!-- Agendar Partida -->
-    <section id="scheduleGame">
-    <!-- Modal de detalhes do jogo -->
-<div id="gameModal" class="modal">
+  <!-- Tela de Agendar Partida -->
+  <section id="schedule-match" class="schedule-match">
+    <h2>Agendar Partida</h2>
+    <form id="scheduleForm">
+      <label for="game-category"><i class="fas fa-gamepad"></i> Categoria:</label>
+      <select id="game-category" name="category" required>
+        <option value="" disabled selected>Selecione uma categoria</option>
+        <option value="LoL">League of Legends</option>
+        <option value="Valorant">Valorant</option>
+        <option value="CS:GO">Counter-Strike: Global Offensive</option>
+        <option value="Fortnite">Fortnite</option>
+        <!-- Adicione mais opções conforme necessário -->
+      </select>
+
+      <label for="date"><i class="fas fa-calendar-alt"></i> Data:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time"><i class="fas fa-clock"></i> Hora:</label>
+      <input type="time" id="time" name="time" required>
+
+      <button type="submit" class="schedule-btn"><i class="fas fa-plus"></i> Agendar</button>
+    </form>
+  </section>
+
+  <!-- Modal de Detalhes do Jogo -->
+  <div id="gameModal" class="modal">
     <div class="modal-content">
       <span id="closeModal" class="close">&times;</span>
       <h2>Detalhes da Partida</h2>
       <p id="gameDetails">Aqui aparecerão os detalhes da partida.</p>
     </div>
   </div>
-  
+
+  <script src="script.js"></script>
+</body>
+</html>

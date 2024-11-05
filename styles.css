@@ -84,3 +84,109 @@ button:hover, select:hover, input:hover {
     width: 45%;
   }
 }
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Aplicando a animação nas seções */
+section {
+  padding: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px 0;
+  background-color: #22234d;
+  border-radius: 8px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Botões com transição de cor */
+button, select, input {
+  font-size: 1em;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: #793AAF;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, select:hover, input:hover {
+  background-color: #56297d;
+  transform: translateY(-2px);
+}
+/* Ajustes para dispositivos mobile */
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  section {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+/* Ajustes para tablets e desktops */
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  section {
+    width: 40%;
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+}
+/* Estilo do Modal */
+.modal {
+  display: none; /* Oculto por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #22234d;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close {
+  color: #fff;
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #793AAF;
+}
+

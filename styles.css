@@ -1,4 +1,4 @@
-
+/* Estilo de Fundo Degradê para o Corpo */
 body {
   background: linear-gradient(to bottom, #2B0E44, #000000);
   color: #ffffff;
@@ -433,7 +433,7 @@ form select, form input[type="date"], form input[type="time"] {
 }
 
 body {
-  padding-top: 500px;
+  padding-top: 300px;
 }
 
 section {
@@ -473,4 +473,18 @@ select, input[type="date"], input[type="time"] {
   padding: 100px 80px;
   margin-top: 150px;
   text-align: center;
+}
+
+.neon-title {
+  font-size: 3em;
+  font-weight: bold;
+  color: #ffffff; 
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  text-shadow: 
+    0 0 10px #793AAF, 
+    0 0 20px #793AAF, 
+    0 0 30px #bf00ff, 
+    0 -2px 20px #d900ff;
 }

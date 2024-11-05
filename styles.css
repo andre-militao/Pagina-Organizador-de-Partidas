@@ -1,4 +1,4 @@
-/* Estilo de Fundo Degradê para o Corpo */
+
 body {
   background: linear-gradient(to bottom, #2B0E44, #000000);
   color: #ffffff;
@@ -12,7 +12,7 @@ body {
   gap: 20px;
 }
 
-/* Estilo para a Tela de Boas-Vindas */
+
 .welcome-screen {
   text-align: center;
 }
@@ -52,7 +52,7 @@ body {
   margin-right: 8px;
 }
 
-/* Estilo para a Tela de Listagem de Partidas */
+
 .match-list {
   display: flex;
   flex-direction: column;
@@ -88,7 +88,7 @@ body {
   margin-top: 10px;
 }
 
-/* Estilo para a Tela de Agendar Partida */
+
 .schedule-match {
   background-color: #2B0E44;
   padding: 20px;
@@ -132,7 +132,7 @@ select, input[type="date"], input[type="time"] {
 .schedule-btn:hover {
   background-color: #5a2e7a;
 }
-/* Reset básico */
+
 * {
   margin: 0;
   padding: 0;
@@ -149,7 +149,7 @@ body {
   min-height: 100vh;
 }
 
-/* Cabeçalho */
+
 header {
   width: 100%;
   background-color: #1a1a2e;
@@ -184,6 +184,7 @@ nav ul li a:hover {
   color: #793AAF;
 }
 
+
 #loginButton {
   background-color: #793AAF;
   color: #fff;
@@ -201,7 +202,7 @@ nav ul li a:hover {
   background-color: #56297d;
 }
 
-/* Tela de Boas-Vindas */
+
 .welcome-screen {
   text-align: center;
   padding: 40px 20px;
@@ -242,7 +243,7 @@ nav ul li a:hover {
   transform: scale(0.95);
 }
 
-/* Tela de Listagem de Partidas */
+
 .match-list {
   width: 90%;
   max-width: 800px;
@@ -302,7 +303,7 @@ nav ul li a:hover {
   font-size: 0.9em;
 }
 
-/* Tela de Agendar Partida */
+
 .schedule-match {
   width: 90%;
   max-width: 600px;
@@ -354,9 +355,9 @@ form select, form input[type="date"], form input[type="time"] {
   transform: translateY(-2px);
 }
 
-/* Modal de Detalhes do Jogo */
+
 .modal {
-  display: none; /* Oculto por padrão */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -398,7 +399,7 @@ form select, form input[type="date"], form input[type="time"] {
   to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsividade */
+
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -429,4 +430,47 @@ form select, form input[type="date"], form input[type="time"] {
     font-size: 0.9em;
     padding: 8px 16px;
   }
+}
+
+body {
+  padding-top: 500px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.match-list, .schedule-match {
+  padding: 30px;
+}
+
+nav ul li a {
+  padding: 10px 15px;
+  margin-right: 10px;
+}
+#loginButton {
+  margin-left: 20px;
+}
+.discord-login-btn, .schedule-btn {
+  margin-top: 15px;
+}
+
+select, input[type="date"], input[type="time"] {
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
+
+  .welcome-screen, .match-list, .schedule-match {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.welcome-screen {
+  padding: 100px 40px;
+  margin-top: 200px;
+  text-align: center;
 }

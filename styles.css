@@ -470,7 +470,7 @@ select, input[type="date"], input[type="time"] {
 }
 
 .welcome-screen {
-  padding: 100px 40px;
-  margin-top: 200px;
+  padding: 100px 80px;
+  margin-top: 150px;
   text-align: center;
 }
